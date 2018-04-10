@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background-size: cover;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header"
+    "header-sidebar header-sidebar"
+    "profile profile"
+    "content content"
+    "footer footer";
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    float: left;
+    margin: 0;
+}
+
+.header-sidebar{
+    grid-area: header-sidebar;
+    display: grid;
+    color: white;
+    float: right;
+    margin: 0;
+}
+.profile{
+    grid-area: profile;
+}
+.white{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.footer{
+    text-align: center;
+}
+img{
+    border-radius: 100px;
+    margin-left:100px;
+    text-align: center;
+}
+.content{
+    grid-area: content;
+    display: grid;
+    color: white;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    text-align: center;
+}
+
+.time{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.grid div:nth-child(even){
+    background-color: #C4C0C0;
+}
+
+.grid div:nth-child(odd){
+    background-color: #C4C0C0;
+}
+
+@media screen and (min-width: 736px){
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". header header-sidebar ."
+    ". profile content ."
+    ". footer footer .";
+}
+}
